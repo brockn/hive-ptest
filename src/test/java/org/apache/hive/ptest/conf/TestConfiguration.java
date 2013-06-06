@@ -45,7 +45,7 @@ public class TestConfiguration {
     Assert.assertEquals("-Dtest.continue.on.failure=true -Dtest.silent=false", conf.getAntArgs());   
     Assert.assertNotNull(conf.toString());
 
-    Assert.assertNull(conf.getPatch());
+    Assert.assertEquals("", conf.getPatch());
     conf.setPatch("Patch");
     Assert.assertEquals("Patch", conf.getPatch());
     
