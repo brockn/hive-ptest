@@ -15,6 +15,11 @@ Example:
        -DartifactId=ApprovalsJava -Dversion=013 -Dpackaging=jar
     mvn clean package
 
+# Sizing
+
+We utilize 8 servers for this process and trunk builds complete in 1 hour. Each slave
+has 8 physical cores with hyperthreading enabled and 48GB of ram. Each slave is allowed
+8 test "threads". I had used more than 8 threads but Zookeeper timed out randomly.
 
 # Configuring
 
