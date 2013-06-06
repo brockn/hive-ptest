@@ -75,7 +75,8 @@ public class Configuration {
         "workingDirectory").trim();
     antArgs =  Preconditions.checkNotNull(context.getString("antArgs"), "antArgs").trim();
     antEnvOpts =  context.getString("antEnvOpts", "").trim();
-    javaHome =  context.getString("javaHome", "").trim();    
+    javaHome =  context.getString("javaHome", "").trim();
+    patch = Strings.nullToEmpty(null);
   }
   public Set<Host> getHosts() {
     return hosts;
