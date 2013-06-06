@@ -33,9 +33,15 @@ cd $workingDir/
   git reset --hard origin/$branch
   git merge --ff-only origin/$branch
   git gc
-  if [[ -f $workingDir/scratch/build.patch ]]
+  patchCommandPath=$workingDir/scratch/smart-apply-patch.sh
+  patchFilePath=$workingDir/scratch/build.patch
+  if [[ -f $patchFilePath ]]
   then
-    git apply < $workingDir/scratch/build.patch
+    chmod +x $patchCommandPath
+    if $patchCommandPath $patchFilePath true
+    then
+      $patchCommandPath $patchFilePath
+    fi
   fi
   ant $antArgs -Divy.default.ivy.user.dir=$workingDir/ivy -Dmvn.local.repo=$workingDir/maven clean package
   ant $antArgs -Divy.default.ivy.user.dir=$workingDir/ivy -Dmvn.local.repo=$workingDir/maven -Dtestcase=nothing test

@@ -19,6 +19,8 @@
 package org.apache.hive.ptest;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
@@ -61,6 +63,16 @@ public class PrepPhase extends Phase {
       execInstances("mkdir -p $localDir/$instanceName/logs $localDir/$instanceName/maven $localDir/$instanceName/scratch");
       execInstances("mkdir -p $localDir/$instanceName/ivy $localDir/$instanceName/${repositoryName}-source");
       if(patchFile != null) {
+        File smartApplyPatch = new File(scratchDir, "smart-apply-patch.sh");
+        PrintWriter writer = new PrintWriter(smartApplyPatch);
+        try {
+          writer.write(readResource("smart-apply-patch.sh"));
+          if(writer.checkError()) {
+            throw new IOException("Error writing to " + smartApplyPatch);
+          }
+        } finally {
+          writer.close();      
+        }
         execLocally("cp -f " + patchFile.getPath() + " $workingDir/scratch/build.patch");
       }
       {
