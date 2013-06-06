@@ -1,0 +1,11 @@
+mkdir -p /some/local/dir/somehost-someuser-13/logs /some/local/dir/somehost-someuser-13/maven /some/local/dir/somehost-someuser-13/scratch
+mkdir -p /some/local/dir/somehost-someuser-13/ivy /some/local/dir/somehost-someuser-13/repositoryName-source
+mkdir -p /some/working/dir/scratch /some/working/dir/isolated/logs /some/working/dir/isolated/maven
+mkdir -p /some/working/dir/isolated/scratch /some/working/dir/isolated/ivy /some/working/dir/isolated/repositoryName-source
+bash /tmp/hive-ptest-units/TestPrepPhase/source-prep.sh
+rsync -qavP --delete --delete-during --force /some/working/dir/repositoryName-source /some/working/dir/isolated/
+rsync -qavP --delete --delete-during --force /some/working/dir/ivy /some/working/dir/isolated/
+rsync -qavP --delete --delete-during --force /some/working/dir/maven /some/working/dir/isolated/
+/some/working/dir/repositoryName-source /some/local/dir/somehost-someuser-13/
+/some/working/dir/maven /some/local/dir/somehost-someuser-13/
+/some/working/dir/ivy /some/local/dir/somehost-someuser-13/

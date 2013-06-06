@@ -1,0 +1,2 @@
+bash /tmp/hive-ptest-units/TestExecutionPhase/isolated/hiveptest-driver.sh
+cp -R /tmp/hive-ptest-units/TestExecutionPhase/isolated/logs/* /tmp/hive-ptest-units/TestExecutionPhase/logs/failed/driver

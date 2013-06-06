@@ -1,0 +1,4 @@
+killall -q -9 -f java || true
+killall -q -9 -u hiveptest || true
+rm -rf /some/local/dir/somehost-someuser-13/scratch /some/local/dir/somehost-someuser-13/logs
+rm -rf /some/working/dir/scratch /some/working/dir/isolated/scratch /some/working/dir/isolated/logs

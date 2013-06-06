@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="1" hostname="p0416.mtv.cloudera.com" name="org.apache.hadoop.hive.cli.TestCliDriver" tests="2" time="439.527" timestamp="2013-01-28T01:14:46">
+  <properties>
+    <property name="hadoop.bin.path" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/testutils/hadoop" />
+    <property name="hadoop.mirror2" value="http://archive.cloudera.com/hive-deps" />
+    <property name="basedir.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql" />
+    <property name="env.HADOOP_HEAPSIZE" value="500" />
+    <property name="env.SSH_CLIENT" value="172.29.122.3 46755 22" />
+    <property name="ql.test.results.clientpositive.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/src/test/results/clientpositive" />
+    <property name="java.specification.name.ql.ivy.settings" value="Java Platform API Specification" />
+    <property name="zookeeper.version" value="3.4.5-cdh4.2.0-SNAPSHOT" />
+    <property name="maven2.pattern" value="[organisation]/[module]/[revision]/[module]-[revision](-[classifier])" />
+    <property name="hadoop.common.test.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/share/hadoop/common/hadoop-common-2.0.0-cdh4.2.0-SNAPSHOT-tests.jar" />
+    <property name="ivy.resolver.default.check.modified.ql.ivy.settings" value="false" />
+    <property name="ivy.lib.dir.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/lib" />
+    <property name="ant.library.dir" value="/mnt/hive-shared/apache-ant-1.8.4/lib" />
+    <property name="jasperc.test.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/lib/jetty-ext/jasper-compiler.jar" />
+    <property name="ivy.checkmodified" value="false" />
+    <property name="ant.core.lib" value="/mnt/hive-shared/apache-ant-1.8.4/lib/ant.jar" />
+    <property name="ivyresolvelog" value="default" />
+    <property name="user.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql" />
+    <property name="java.vm.version" value="20.6-b01" />
+    <property name="line.separator.ql.ivy.settings" value="&#xa;" />
+    <property name="maven2.pattern.ql.ivy.settings" value="[organisation]/[module]/[revision]/[module]-[revision](-[classifier])" />
+    <property name="ivy.settings.dir.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ivy" />
+    <property name="stringtemplate.version" value="3.1-b1" />
+    <property name="jackson.version" value="1.8.8" />
+    <property name="java.vendor.url.ql.ivy.settings" value="http://java.sun.com/" />
+    <property name="test.warehouse.scheme" value="pfile://" />
+    <property name="ivy.changingPattern" value=".*SNAPSHOT" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="maven2.pattern.ext" value="[organisation]/[module]/[revision]/[module]-[revision](-[classifier]).[ext]" />
+    <property name="ql.test.clientpositive.exclude" value="input16_cc.q,scriptfile1.q,bucket4.q,bucketmapjoin6.q,disable_merge_for_bucketing.q,reduce_deduplicate.q,smb_mapjoin_8.q,join1.q,groupby2.q,bucketizedhiveinputformat.q,bucketmapjoin7.q,optrstat_groupby.q,bucket_num_reducers.q" />
+    <property name="jetty.version" value="6.1.26" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="releases.cloudera.com.ql.ivy.settings" value="https://repository.cloudera.com/artifactory/cdh-releases-rcs/" />
+    <property name="ql.test.results.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/src/test/results" />
+    <property name="ant.library.dir.ql.ivy.settings" value="/mnt/hive-shared/apache-ant-1.8.4/lib" />
+    <property name="tempus-fugit.version" value="1.1" />
+    <property name="ivy.distrib.dir.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/distrib" />
+    <property name="repo.maven.org" value="http://repo1.maven.org/maven2/" />
+    <property name="ivy.default.conf.dir.ql.ivy.settings" value="jar:file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/ivy-2.1.0.jar!/org/apache/ivy/core/settings" />
+    <property name="os.name" value="Linux" />
+    <property name="ivy.status" value="integration" />
+    <property name="ivy.default.always.check.exact.revision.ql.ivy.settings" value="false" />
+    <property name="java.vm.specification.vendor.ql.ivy.settings" value="Sun Microsystems Inc." />
+    <property name="ant.file.hivecommon" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build-common.xml" />
+    <property name="ant.home.ql.ivy.settings" value="/mnt/hive-shared/apache-ant-1.8.4" />
+    <property name="ant.file.ql" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/build.xml" />
+    <property name="test.junit.timeout" value="43200000" />
+    <property name="standalone" value="false" />
+    <property name="ivy.conf.file.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ivy/ivysettings.xml" />
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+    <property name="junit.script.extension" value="" />
+    <property name="ivy.status.ql.ivy.settings" value="integration" />
+    <property name="minimr.query.negative.files" value="cluster_tasklog_retrieval.q,minimr_broken_pipe.q,mapreduce_stack_trace.q,mapreduce_stack_trace_turnoff.q,mapreduce_stack_trace_hadoop20.q,mapreduce_stack_trace_turnoff_hadoop20.q" />
+    <property name="hadoop.conf.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/conf" />
+    <property name="os.arch" value="amd64" />
+    <property name="user.name" value="hiveptest" />
+    <property name="ivy.checksums.ql.ivy.settings" value="sha1,md5" />
+    <property name="version" value="0.10.0-cdh4.2.0-SNAPSHOT" />
+    <property name="maven-ant-tasks.version" value="2.1.0" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.apache.hadoop.hive.cli.TestCliDriver filtertrace=false haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/TEST-org.apache.hadoop.hive.cli.TestCliDriver.xml crashfile=/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/junitvmwatcher31005294106556678.properties propsfile=/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/junit5668735960292847108.properties" />
+    <property name="env.USER" value="hiveptest" />
+    <property name="javac.version" value="1.6" />
+    <property name="java.vm.info.ql.ivy.settings" value="mixed mode" />
+    <property name="env.SSH_CONNECTION" value="172.29.122.3 46755 172.29.122.8 22" />
+    <property name="env.LOGNAME" value="hiveptest" />
+    <property name="java.vm.version.ql.ivy.settings" value="20.6-b01" />
+    <property name="java.awt.printerjob.ql.ivy.settings" value="sun.print.PSPrinterJob" />
+    <property name="ivy.default.conf.dir" value="jar:file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/ivy-2.1.0.jar!/org/apache/ivy/core/settings" />
+    <property name="jetty.test.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/lib/jetty-5.1.4.jar" />
+    <property name="commons-httpclient.version" value="3.0.1" />
+    <property name="datanucleus-enhancer.version" value="2.0.3" />
+    <property name="libthrift.version" value="0.9.0" />
+    <property name="user.country" value="US" />
+    <property name="java.library.path.ql.ivy.settings" value="/usr/java/jdk1.6.0_31/jre/lib/amd64/server:/usr/java/jdk1.6.0_31/jre/lib/amd64:/usr/java/jdk1.6.0_31/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib" />
+    <property name="sun.java.launcher.ql.ivy.settings" value="SUN_STANDARD" />
+    <property name="ivy.dep.file.ql.ivy.settings" value="ivy.xml" />
+    <property name="sun.cpu.isalist.ql.ivy.settings" value="" />
+    <property name="javaewah.version" value="0.3.2" />
+    <property name="checkstyle.version" value="5.0" />
+    <property name="ivy.default.always.check.exact.revision" value="false" />
+    <property name="ivysettings.xml" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ivy/ivysettings.xml" />
+    <property name="java.endorsed.dirs" value="/usr/java/jdk1.6.0_31/jre/lib/endorsed" />
+    <property name="file.encoding.ql.ivy.settings" value="UTF-8" />
+    <property name="build.ivy.maven.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/maven" />
+    <property name="ant.file.type.hive" value="file" />
+    <property name="ivy.lib.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/lib" />
+    <property name="junit.version" value="4.10" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="ivy.home.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/ivy" />
+    <property name="file.separator.ql.ivy.settings" value="/" />
+    <property name="hadoopVersion" value="2.0.0-cdh4.2.0-SNAPSHOT" />
+    <property name="ql.test.query.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/src/test/queries" />
+    <property name="env.CVS_RSH" value="ssh" />
+    <property name="ivy.settings.url" value="file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ivy/ivysettings.xml" />
+    <property name="test.junit.exclude" value="&quot;**/TestBeeLineDriver.class, **/TestHiveServer2Concurrency.class&quot;" />
+    <property name="env.SHLVL" value="2" />
+    <property name="java.vm.specification.version.ql.ivy.settings" value="1.0" />
+    <property name="user.country.ql.ivy.settings" value="US" />
+    <property name="java.vendor" value="Sun Microsystems Inc." />
+    <property name="ivy.default.settings.dir" value="jar:file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/ivy-2.1.0.jar!/org/apache/ivy/core/settings" />
+    <property name="env.HADOOP_SECURITY_LOGGER" value="INFO,console" />
+    <property name="ivy.default.ivy.user.dir.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/ivy" />
+    <property name="ivy.settings.file" value="ivysettings.xml" />
+    <property name="grammarBuild.notRequired" value="true" />
+    <property name="javac.debug" value="on" />
+    <property name="hadoop.mapreduce.tools.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/hadoop-mapreduce-tools-2.0.0-cdh4.2.0-SNAPSHOT.jar" />
+    <property name="sourceforge-repo.ql.ivy.settings" value="http://www.sourceforge.net/projects" />
+    <property name="file.separator" value="/" />
+    <property name="ivy.local.default.ivy.pattern.ql.ivy.settings" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" />
+    <property name="datanucleus-core.version" value="2.0.3-ZD5977-CDH5293" />
+    <property name="commons-collections.version" value="3.2.1" />
+    <property name="ivy.conf.file" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ivy/ivysettings.xml" />
+    <property name="env.XFILESEARCHPATH" value="/usr/dt/app-defaults/%L/Dt" />
+    <property name="jdo-api.version" value="2.3-ec" />
+    <property name="os.version.ql.ivy.settings" value="2.6.32-71.el6.x86_64" />
+    <property name="rat.version" value="0.8" />
+    <property name="antlr.version" value="3.4" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="mockito-all.version" value="1.8.2" />
+    <property name="env.MAIL" value="/var/mail/hiveptest" />
+    <property name="env.NLSPATH" value="/usr/dt/lib/nls/msg/%L/%N.cat" />
+    <property name="hadoop.newstyle-name.test.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/hadoop-test-2.0.0-cdh4.2.0-SNAPSHOT.jar" />
+    <property name="ant.home" value="/mnt/hive-shared/apache-ant-1.8.4" />
+    <property name="test.service.disable.server" value="false" />
+    <property name="sun.boot.class.path.ql.ivy.settings" value="/usr/java/jdk1.6.0_31/jre/lib/resources.jar:/usr/java/jdk1.6.0_31/jre/lib/rt.jar:/usr/java/jdk1.6.0_31/jre/lib/sunrsasign.jar:/usr/java/jdk1.6.0_31/jre/lib/jsse.jar:/usr/java/jdk1.6.0_31/jre/lib/jce.jar:/usr/java/jdk1.6.0_31/jre/lib/charsets.jar:/usr/java/jdk1.6.0_31/jre/lib/modules/jdk.boot.jar:/usr/java/jdk1.6.0_31/jre/classes" />
+    <property name="ivy.resolved.file" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/ivy.xml" />
+    <property name="ant.java.version" value="1.6" />
+    <property name="java.library.path" value="/usr/java/jdk1.6.0_31/jre/lib/amd64/server:/usr/java/jdk1.6.0_31/jre/lib/amd64:/usr/java/jdk1.6.0_31/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib" />
+    <property name="test.classpath.id" value="test.classpath" />
+    <property name="hadoop.security.version.prefix" value="0.23" />
+    <property name="avro.version" value="1.7.3" />
+    <property name="test.tmp.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/tmp" />
+    <property name="ivy.resolved.configurations" value="test" />
+    <property name="ql.test.query.clientpositive.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/src/test/queries/clientpositive" />
+    <property name="antlr-runtime.version" value="3.4" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="basedir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql" />
+    <property name="maven2.pattern.ext.ql.ivy.settings" value="[organisation]/[module]/[revision]/[module]-[revision](-[classifier]).[ext]" />
+    <property name="ivy.version" value="2.1.0" />
+    <property name="java.endorsed.dirs.ql.ivy.settings" value="/usr/java/jdk1.6.0_31/jre/lib/endorsed" />
+    <property name="hadoop.mr.rev" value="23" />
+    <property name="env.PATH" value="/mnt/hive-shared/apache-ant-1.8.4/bin/:/mnt/hive-shared/apache-maven-3.0.4/bin:/usr/local/bin:/bin:/usr/bin" />
+    <property name="resolvers.ql.ivy.settings" value="default" />
+    <property name="path.separator" value=":" />
+    <property name="ql.test.beelinepositive.exclude" value="${test.beelinepositive.exclude}" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="ivy.conf.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ivy" />
+    <property name="user.home.ql.ivy.settings" value="/home/hiveptest" />
+    <property name="Name" value="Hive" />
+    <property name="hadoop.hdfs.test.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/share/hadoop/hdfs/hadoop-hdfs-2.0.0-cdh4.2.0-SNAPSHOT-tests.jar" />
+    <property name="user.language" value="en" />
+    <property name="qfile_regex" value="" />
+    <property name="guava-hadoop20.version" value="r09" />
+    <property name="ivy.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/ivy-2.1.0.jar" />
+    <property name="hadoop.oldstyle-name.tools.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/hadoop-2.0.0-cdh4.2.0-SNAPSHOT-tools.jar" />
+    <property name="hadoop.mirror" value="http://mirror.facebook.net/facebook/hive-deps" />
+    <property name="mvn.pom.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/maven/poms" />
+    <property name="ant.project.invoked-targets" value="test" />
+    <property name="qfile" value="skewjoin.q" />
+    <property name="test.data.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/data" />
+    <property name="ivy.project.dir.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql" />
+    <property name="user.language.ql.ivy.settings" value="en" />
+    <property name="ql.test.results.beelinepositive.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/src/test/results/beelinepositive" />
+    <property name="ivy.report.output.pattern" value="[organisation]-[module]-[conf].[ext]" />
+    <property name="test.src.data.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data" />
+    <property name="test.build.src" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/src" />
+    <property name="java.class.version" value="50.0" />
+    <property name="test.output.overwrite" value="false" />
+    <property name="java.specification.vendor.ql.ivy.settings" value="Sun Microsystems Inc." />
+    <property name="test.continue.on.failure" value="true" />
+    <property name="overwrite" value="false" />
+    <property name="test.resources.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/src/test/resources" />
+    <property name="ivy.retrieve.pattern.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/lib/[artifact]-[revision](-[classifier]).[ext]" />
+    <property name="user.name.ql.ivy.settings" value="hiveptest" />
+    <property name="java.version.ql.ivy.settings" value="1.6.0_31" />
+    <property name="java.class.version.ql.ivy.settings" value="50.0" />
+    <property name="ql.test.template.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/src/test/templates" />
+    <property name="mrapp-classpath" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/resources:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/conf:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/conf:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/beeline/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/cli/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/common/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hbase-handler/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hwi/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/jdbc/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/metastore/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/serde/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/service/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/shims/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/JavaEWAH-0.3.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/ST4-4.0.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/antlr-2.7.7.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/antlr-runtime-3.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/avro-1.7.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/avro-ipc-1.7.3-tests.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/avro-mapred-1.7.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-cli-1.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-codec-1.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-collections-3.2.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-compress-1.4.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-configuration-1.6.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-dbcp-1.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-io-2.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-lang-2.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-logging-1.0.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-logging-api-1.0.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-pool-1.5.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/datanucleus-connectionpool-2.0.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/datanucleus-core-2.0.3-ZD5977-CDH5293.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/datanucleus-enhancer-2.0.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/datanucleus-rdbms-2.0.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/derby-10.4.2.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/guava-11.0.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hbase-0.94.2-cdh4.2.0-SNAPSHOT-tests.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hbase-0.94.2-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-beeline-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-builtins-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-cli-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-common-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-exec-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-hbase-handler-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-hwi-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-jdbc-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-metastore-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-pdk-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-serde-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-service-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-shims-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jackson-core-asl-1.8.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jackson-jaxrs-1.8.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jackson-mapper-asl-1.8.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jackson-xc-1.8.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/javolution-5.5.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jdo2-api-2.3-ec.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jetty-6.1.26.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jetty-util-6.1.26.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jline-0.9.94.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/json-20090211.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/log4j-1.2.16.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/netty-3.4.0.Final.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/paranamer-2.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/servlet-api-2.5-20081211.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/slf4j-api-1.6.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/slf4j-log4j12-1.6.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/snappy-java-1.0.4.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/stringtemplate-3.2.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/tempus-fugit-1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/xz-1.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/zookeeper-3.4.5-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/testlibs/ant-contrib-1.0b3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/activation-1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/antlr-3.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/aopalliance-1.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/asm-3.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/asm-3.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/cglib-2.2.1-v20090111.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-beanutils-1.7.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-beanutils-core-1.8.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-digester-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-el-1.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-httpclient-3.0.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-httpclient-3.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-io-2.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-lang-2.5.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-logging-1.1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-math-2.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-net-3.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/guice-3.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/guice-servlet-3.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-annotations-2.0.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-auth-2.0.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-common-2.0.0-cdh4.2.0-SNAPSHOT-tests.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-common-2.0.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-hdfs-2.0.0-cdh4.2.0-SNAPSHOT-tests.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-hdfs-2.0.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-minicluster-2.0.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hamcrest-core-1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jasper-compiler-5.5.23.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jasper-runtime-5.5.23.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/javax.inject-1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jaxb-api-2.2.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jaxb-impl-2.2.3-1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jersey-core-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jersey-guice-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jersey-json-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jersey-server-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jersey-test-framework-grizzly2-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jets3t-0.6.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jettison-1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jetty-6.1.26.cloudera.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jetty-util-6.1.26.cloudera.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jsch-0.1.42.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jsp-api-2.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jsr305-1.3.9.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/junit-4.10.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/junit-4.8.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/kfs-0.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/libfb303-0.9.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/libthrift-0.9.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/log4j-1.2.17.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/mockito-all-1.8.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/mockito-all-1.8.5.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/netty-3.2.4.Final.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/protobuf-java-2.4.0a.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/servlet-api-2.5.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/slf4j-api-1.6.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/stax-api-1.0.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/velocity-1.7.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/xmlenc-0.52.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hive-testutils-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/default/high-scale-lib-1.1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/default/velocity-1.5.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/core-3.1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/ftplet-api-1.0.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/ftpserver-core-1.0.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/ftpserver-deprecated-1.0.0-M2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/hadoop-core-2.0.0-mr1-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/hadoop-minicluster-2.0.0-mr1-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/hadoop-test-2.0.0-mr1-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/hadoop-tools-2.0.0-mr1-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/hsqldb-1.8.0.10.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/junit-4.8.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/mina-core-2.0.0-M5.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/classes" />
+    <property name="jasper.test.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/lib/jetty-ext/jasper-runtime.jar" />
+    <property name="commons-dbcp.version" value="1.4" />
+    <property name="ivy.cache.name" value="online" />
+    <property name="hadoop.newstyle-name.tools.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/hadoop-tools-2.0.0-cdh4.2.0-SNAPSHOT.jar" />
+    <property name="test.hadoop.bin.path" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/testutils/hadoop" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="ant.file.type.ql" value="file" />
+    <property name="hbase-test.version" value="0.94.2-cdh4.2.0-SNAPSHOT" />
+    <property name="java.vendor.url.bug.ql.ivy.settings" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+    <property name="env.SHELL" value="/bin/bash" />
+    <property name="name" value="hive" />
+    <property name="hadoop.dep.name" value="hadoop-dist" />
+    <property name="java.home" value="/usr/java/jdk1.6.0_31/jre" />
+    <property name="snapshots.cloudera.com" value="https://repository.cloudera.com/artifactory/libs-snapshot-local/" />
+    <property name="java.vm.specification.name.ql.ivy.settings" value="Java Virtual Machine Specification" />
+    <property name="ivy.build.artifacts.dir.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/build/artifacts" />
+    <property name="build.encoding" value="ISO-8859-1" />
+    <property name="java.class.path.ql.ivy.settings" value="/mnt/hive-shared/apache-ant-1.8.4/lib/ant-launcher.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-launcher.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-apache-regexp.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-apache-bcel.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-apache-resolver.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-junit4.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-antlr.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-swing.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-testutil.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-netrexx.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-apache-log4j.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-apache-xalan2.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-jsch.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-javamail.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-junit.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-jdepend.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-apache-oro.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-apache-bsf.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-commons-logging.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-jmf.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-jai.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-commons-net.jar:/usr/java/jdk1.6.0_31/lib/tools.jar" />
+    <property name="ant.project.default-target" value="jar" />
+    <property name="ivy.cache.resolution" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/resolution-cache" />
+    <property name="test.concurrency.num.threads" value="1" />
+    <property name="ivy.local.default.artifact.pattern.ql.ivy.settings" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" />
+    <property name="sun.cpu.endian.ql.ivy.settings" value="little" />
+    <property name="build.ivy.report.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/report" />
+    <property name="javac.args.warnings" value="" />
+    <property name="commons-pool.version" value="1.5.4" />
+    <property name="hadoop.common.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/share/hadoop/common/hadoop-common-2.0.0-cdh4.2.0-SNAPSHOT.jar" />
+    <property name="mvn.license.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/maven/licenses" />
+    <property name="snapshot.apache.org" value="https://repository.apache.org/content/repositories/snapshots/" />
+    <property name="clustermode" value="" />
+    <property name="repo.maven.org.ql.ivy.settings" value="http://repo1.maven.org/maven2/" />
+    <property name="build.dir.hive" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build" />
+    <property name="jline.version" value="0.9.94" />
+    <property name="hadoop.mapreduce.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/modules/hadoop-mapreduce-client-core-2.0.0-cdh4.2.0-SNAPSHOT.jar" />
+    <property name="java.ext.dirs.ql.ivy.settings" value="/usr/java/jdk1.6.0_31/jre/lib/ext:/usr/java/packages/lib/ext" />
+    <property name="hive.ivy.org" value="org.apache.hive" />
+    <property name="hadoop.oldstyle-name.test.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/hadoop-2.0.0-cdh4.2.0-SNAPSHOT-test.jar" />
+    <property name="build.classes" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/classes" />
+    <property name="reactor.repo" value="https://repository.cloudera.com/content/repositories/snapshots" />
+    <property name="test.build.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="ivy.local.default.ivy.pattern" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" />
+    <property name="testcase" value="TestCliDriver" />
+    <property name="javac.deprecation" value="off" />
+    <property name="ivy.local.default.root.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/ivy/local" />
+    <property name="ivy.publish.pattern" value="[artifact]-[revision].[ext]" />
+    <property name="snapshot.apache.org.ql.ivy.settings" value="https://repository.apache.org/content/repositories/snapshots/" />
+    <property name="sun.io.unicode.encoding.ql.ivy.settings" value="UnicodeLittle" />
+    <property name="mvn.jar.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/maven/jars" />
+    <property name="java.runtime.version.ql.ivy.settings" value="1.6.0_31-b04" />
+    <property name="disableserver" value="false" />
+    <property name="test.print.classpath" value="false" />
+    <property name="ant.file" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/build.xml" />
+    <property name="os.arch.ql.ivy.settings" value="amd64" />
+    <property name="velocity.version" value="1.5" />
+    <property name="test.output" value="true" />
+    <property name="ant-task.version" value="2.0.10" />
+    <property name="ivy.local.default.artifact.pattern" value="[organisation]/[module]/[revision]/[type]s/[artifact].[ext]" />
+    <property name="hive.version" value="0.10.0-cdh4.2.0-SNAPSHOT" />
+    <property name="common.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/lib/commons-httpclient-3.0.1.jar" />
+    <property name="hadoop.classpath.exclude" value="**/hadoop-mapreduce*.jar,**/hadoop-yarn*.jar,**/hadoop-archives*.jar" />
+    <property name="hadoop.opts.23" value="-D mapreduce.framework.name=local" />
+    <property name="ivy.deliver.ivy.pattern.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/distrib/[type]s/[artifact]-[revision](-[classifier]).[ext]" />
+    <property name="hadoop.opts.20" value="-D mapreduce.framework.name=local" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="build.ivy.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="asm.version" value="3.1" />
+    <property name="hadoop.log.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/logs" />
+    <property name="java.home.ql.ivy.settings" value="/usr/java/jdk1.6.0_31/jre" />
+    <property name="hadoop.dep.org" value="org.apache.hadoop" />
+    <property name="java.io.tmpdir" value="/tmp" />
+    <property name="java.vendor.url" value="http://java.sun.com/" />
+    <property name="ivy.cache.ttl.default" value="eternal" />
+    <property name="ivy.mvn.repo" value="http://repo2.maven.org/maven2" />
+    <property name="java.runtime.name.ql.ivy.settings" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.boot.library.path" value="/usr/java/jdk1.6.0_31/jre/lib/amd64" />
+    <property name="ivy.basedir.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql" />
+    <property name="sun.boot.library.path.ql.ivy.settings" value="/usr/java/jdk1.6.0_31/jre/lib/amd64" />
+    <property name="test.silent" value="false" />
+    <property name="hadoop-0.20.version" value="2.0.0-mr1-cdh4.2.0-SNAPSHOT" />
+    <property name="test.src.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/src/test" />
+    <property name="thrift.gen.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/src/gen/thrift" />
+    <property name="failonerror" value="false" />
+    <property name="commons-logging-api.version" value="1.0.4" />
+    <property name="derby.version" value="10.4.2.0" />
+    <property name="guava-hadoop23.version" value="11.0.2" />
+    <property name="ivy.local.default.root" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/ivy/local" />
+    <property name="ivy.resolver.default.check.modified" value="false" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="shims.include" value="0.23" />
+    <property name="test.warehouse.dir" value="pfile:///data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/data/warehouse" />
+    <property name="ant.project.name" value="ql" />
+    <property name="path.separator.ql.ivy.settings" value=":" />
+    <property name="year" value="2011" />
+    <property name="os.name.ql.ivy.settings" value="Linux" />
+    <property name="ivy.buildlist.ivyfilepath" value="ivy.xml" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="hadoop.mr.test.rev" value="mr1" />
+    <property name="env.G_BROKEN_FILENAMES" value="1" />
+    <property name="ivy.default.ivy.user.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/ivy" />
+    <property name="hadoop.hdfs.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/share/hadoop/hdfs/hadoop-hdfs-2.0.0-cdh4.2.0-SNAPSHOT.jar" />
+    <property name="commons-codec.version" value="1.4" />
+    <property name="user.home" value="/home/hiveptest" />
+    <property name="build.ivy.lib.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib" />
+    <property name="env.JAVA_HOME" value="/usr/java/jdk1.6.0_31" />
+    <property name="javolution.version" value="5.5.1" />
+    <property name="slf4j-log4j12.version" value="1.6.1" />
+    <property name="derby.stream.error.file" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/derby.log" />
+    <property name="ivy.cache.ttl.default.ql.ivy.settings" value="10s" />
+    <property name="hadoop.oldstyle-name.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/hadoop-2.0.0-cdh4.2.0-SNAPSHOT-core.jar" />
+    <property name="test.junit.output.format" value="xml" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="ivy.log.modules.in.use.ql.ivy.settings" value="false" />
+    <property name="ivy.dep.file" value="ivy.xml" />
+    <property name="ivy.buildlist.ivyfilepath.ql.ivy.settings" value="ivy.xml" />
+    <property name="os.family" value="unix" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="ivy.conf.url" value="file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ivy/ivysettings.xml" />
+    <property name="ant.file.type.hivecommon" value="file" />
+    <property name="test.log.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/logs" />
+    <property name="findbugs.version" value="1.3.9" />
+    <property name="ivy.deps.changed" value="false" />
+    <property name="java.version" value="1.6.0_31" />
+    <property name="hadoop.dep.artifact" value="hadoop-dist" />
+    <property name="ivy.settings.file.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ivy/ivysettings.xml" />
+    <property name="apacheant.version" value="1.7.1" />
+    <property name="jdom.version" value="1.1" />
+    <property name="env.LD_LIBRARY_PATH" value="/usr/java/jdk1.6.0_31/jre/lib/amd64/server:/usr/java/jdk1.6.0_31/jre/lib/amd64:/usr/java/jdk1.6.0_31/jre/../lib/amd64" />
+    <property name="sun.arch.data.model.ql.ivy.settings" value="64" />
+    <property name="ql.lib.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/lib" />
+    <property name="javac.args" value="" />
+    <property name="user.timezone.ql.ivy.settings" value="America/Los_Angeles" />
+    <property name="run_disabled" value="false" />
+    <property name="ivy.resolve.default.type.filter.ql.ivy.settings" value="*" />
+    <property name="test.build.resources" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/resources" />
+    <property name="hive.aux.jars.path" value="file:////data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/test-udfs.jar" />
+    <property name="ql.test.query.beelinepositive.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/src/test/queries/beelinepositive" />
+    <property name="mvn.publish.repo" value="snapshots" />
+    <property name="slf4j-api.version" value="1.6.1" />
+    <property name="test.service.standalone.server" value="false" />
+    <property name="env.LESSOPEN" value="|/usr/bin/lesspipe.sh %s" />
+    <property name="hadoop.security.version" value="2.0.0-cdh4.2.0-SNAPSHOT" />
+    <property name="env.M2_HOME" value="/mnt/hive-shared/apache-maven-3.0.4" />
+    <property name="mapreduce.framework.name" value="" />
+    <property name="java.vendor.ql.ivy.settings" value="Sun Microsystems Inc." />
+    <property name="ant.file.type.hiveoffline" value="file" />
+    <property name="ivy.cache.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/ivy/cache" />
+    <property name="resolvers" value="default" />
+    <property name="hadoop.newstyle-name.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/hadoop-core-2.0.0-cdh4.2.0-SNAPSHOT.jar" />
+    <property name="java.io.tmpdir.ql.ivy.settings" value="/tmp" />
+    <property name="hbase.version" value="0.94.2-cdh4.2.0-SNAPSHOT" />
+    <property name="ant-contrib.version" value="1.0b3" />
+    <property name="mvn.deploy.url" value="https://repository.apache.org/content/repositories/snapshots" />
+    <property name="env.PWD" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="test.lang" value="en_US.UTF-8" />
+    <property name="ivy.publish.src.artifacts.pattern" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/distrib/[type]s/[artifact]-[revision](-[classifier]).[ext]" />
+    <property name="java.specification.version" value="1.6" />
+    <property name="java.net.preferIPv4Stack" value="true" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ivy.retrieve.pattern" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/lib/[artifact]-[revision](-[classifier]).[ext]" />
+    <property name="ivy.artifact.retrieve.pattern" value="[conf]/[artifact]-[revision](-[classifier]).[ext]" />
+    <property name="ivy.organisation" value="org.apache.hive" />
+    <property name="env.ANT_HOME" value="/mnt/hive-shared/apache-ant-1.8.4" />
+    <property name="ivy.targets.copied" value="false" />
+    <property name="repo.dir" value="/home/hiveptest/.m2/repository" />
+    <property name="sun.boot.class.path" value="/usr/java/jdk1.6.0_31/jre/lib/resources.jar:/usr/java/jdk1.6.0_31/jre/lib/rt.jar:/usr/java/jdk1.6.0_31/jre/lib/sunrsasign.jar:/usr/java/jdk1.6.0_31/jre/lib/jsse.jar:/usr/java/jdk1.6.0_31/jre/lib/jce.jar:/usr/java/jdk1.6.0_31/jre/lib/charsets.jar:/usr/java/jdk1.6.0_31/jre/lib/modules/jdk.boot.jar:/usr/java/jdk1.6.0_31/jre/classes" />
+    <property name="env.COBBLER_SERVER" value="pxe.sf.cloudera.com" />
+    <property name="ivy.resolve.default.type.filter" value="*" />
+    <property name="hadoop.testcp" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/resources:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/conf:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/conf:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/beeline/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/cli/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/common/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hbase-handler/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hwi/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/jdbc/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/metastore/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/serde/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/service/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/shims/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/JavaEWAH-0.3.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/ST4-4.0.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/antlr-2.7.7.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/antlr-runtime-3.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/avro-1.7.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/avro-ipc-1.7.3-tests.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/avro-mapred-1.7.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-cli-1.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-codec-1.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-collections-3.2.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-compress-1.4.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-configuration-1.6.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-dbcp-1.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-io-2.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-lang-2.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-logging-1.0.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-logging-api-1.0.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-pool-1.5.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/datanucleus-connectionpool-2.0.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/datanucleus-core-2.0.3-ZD5977-CDH5293.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/datanucleus-enhancer-2.0.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/datanucleus-rdbms-2.0.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/derby-10.4.2.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/guava-11.0.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hbase-0.94.2-cdh4.2.0-SNAPSHOT-tests.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hbase-0.94.2-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-beeline-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-builtins-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-cli-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-common-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-exec-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-hbase-handler-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-hwi-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-jdbc-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-metastore-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-pdk-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-serde-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-service-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-shims-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jackson-core-asl-1.8.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jackson-jaxrs-1.8.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jackson-mapper-asl-1.8.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jackson-xc-1.8.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/javolution-5.5.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jdo2-api-2.3-ec.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jetty-6.1.26.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jetty-util-6.1.26.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jline-0.9.94.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/json-20090211.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/log4j-1.2.16.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/netty-3.4.0.Final.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/paranamer-2.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/servlet-api-2.5-20081211.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/slf4j-api-1.6.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/slf4j-log4j12-1.6.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/snappy-java-1.0.4.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/stringtemplate-3.2.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/tempus-fugit-1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/xz-1.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/zookeeper-3.4.5-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/testlibs/ant-contrib-1.0b3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/activation-1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/antlr-3.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/aopalliance-1.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/asm-3.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/asm-3.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/cglib-2.2.1-v20090111.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-beanutils-1.7.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-beanutils-core-1.8.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-digester-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-el-1.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-httpclient-3.0.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-httpclient-3.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-io-2.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-lang-2.5.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-logging-1.1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-math-2.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-net-3.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/guice-3.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/guice-servlet-3.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-annotations-2.0.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-auth-2.0.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-common-2.0.0-cdh4.2.0-SNAPSHOT-tests.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-common-2.0.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-hdfs-2.0.0-cdh4.2.0-SNAPSHOT-tests.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-hdfs-2.0.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-minicluster-2.0.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hamcrest-core-1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jasper-compiler-5.5.23.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jasper-runtime-5.5.23.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/javax.inject-1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jaxb-api-2.2.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jaxb-impl-2.2.3-1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jersey-core-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jersey-guice-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jersey-json-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jersey-server-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jersey-test-framework-grizzly2-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jets3t-0.6.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jettison-1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jetty-6.1.26.cloudera.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jetty-util-6.1.26.cloudera.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jsch-0.1.42.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jsp-api-2.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jsr305-1.3.9.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/junit-4.10.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/junit-4.8.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/kfs-0.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/libfb303-0.9.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/libthrift-0.9.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/log4j-1.2.17.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/mockito-all-1.8.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/mockito-all-1.8.5.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/netty-3.2.4.Final.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/protobuf-java-2.4.0a.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/servlet-api-2.5.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/slf4j-api-1.6.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/stax-api-1.0.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/velocity-1.7.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/xmlenc-0.52.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hive-testutils-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/default/high-scale-lib-1.1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/default/velocity-1.5.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/core-3.1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/ftplet-api-1.0.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/ftpserver-core-1.0.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/ftpserver-deprecated-1.0.0-M2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/hadoop-core-2.0.0-mr1-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/hadoop-minicluster-2.0.0-mr1-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/hadoop-test-2.0.0-mr1-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/hadoop-tools-2.0.0-mr1-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/hsqldb-1.8.0.10.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/junit-4.8.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/mina-core-2.0.0-M5.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/classes" />
+    <property name="src.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/src/java" />
+    <property name="ivy.basedir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql" />
+    <property name="build.dir.hadoop" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore" />
+    <property name="sun.os.patch.level.ql.ivy.settings" value="unknown" />
+    <property name="test.submodule.exclude" value="" />
+    <property name="test.include" value="Test*" />
+    <property name="ivy.default.settings.dir.ql.ivy.settings" value="jar:file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/ivy-2.1.0.jar!/org/apache/ivy/core/settings" />
+    <property name="env.HOME" value="/home/hiveptest" />
+    <property name="commons-compress.version" value="1.4.1" />
+    <property name="test.build.classes" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/classes" />
+    <property name="hadoop.root.default" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT" />
+    <property name="ivy.deliver.ivy.pattern" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/distrib/[type]s/[artifact]-[revision](-[classifier]).[ext]" />
+    <property name="dist.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source" />
+    <property name="file.encoding.pkg.ql.ivy.settings" value="sun.io" />
+    <property name="commons-io.version" value="2.4" />
+    <property name="hive.root" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source" />
+    <property name="releases.cloudera.com" value="https://repository.cloudera.com/artifactory/cdh-releases-rcs/" />
+    <property name="sun.java.command.ql.ivy.settings" value="org.apache.tools.ant.launch.Launcher -cp  -Dtestcase=TestCliDriver -Dqfile=skewjoin.q -Divy.cache.ttl.default=eternal -Dtest.continue.on.failure=true -Dhadoop.mr.test.rev=mr1 -Dtest.silent=false -Divy.default.ivy.user.dir=/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/ivy test" />
+    <property name="datanucleus-rdbms.version" value="2.0.3" />
+    <property name="ivy.conf.url.ql.ivy.settings" value="file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ivy/ivysettings.xml" />
+    <property name="javac.optimize" value="on" />
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="json.version" value="20090211" />
+    <property name="commons-lang.version" value="2.4" />
+    <property name="ivy.project.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql" />
+    <property name="ivy.revision" value="0.10.0-cdh4.2.0-SNAPSHOT" />
+    <property name="sun.management.compiler.ql.ivy.settings" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="java.runtime.version" value="1.6.0_31-b04" />
+    <property name="ivy.home" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/ivy" />
+    <property name="jsp.test.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/lib/jetty-ext/jsp-api.jar" />
+    <property name="log4j.configuration" value="file:////data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/conf/hive-log4j.properties" />
+    <property name="ivy.configurations.ql.ivy.settings" value="*" />
+    <property name="ivy.cache.resolution.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/resolution-cache" />
+    <property name="ant.file.hive" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build.xml" />
+    <property name="user.timezone" value="" />
+    <property name="hadoop.version" value="2.0.0-cdh4.2.0-SNAPSHOT" />
+    <property name="hadoop-0.23.version" value="2.0.0-cdh4.2.0-SNAPSHOT" />
+    <property name="java.ext.dirs" value="/usr/java/jdk1.6.0_31/jre/lib/ext:/usr/java/packages/lib/ext" />
+    <property name="sourceforge-repo" value="http://www.sourceforge.net/projects" />
+    <property name="java.class.path" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/resources:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/conf:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/conf:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/beeline/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/cli/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/common/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hbase-handler/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hwi/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/jdbc/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/metastore/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/serde/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/service/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/shims/test/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/JavaEWAH-0.3.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/ST4-4.0.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/antlr-2.7.7.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/antlr-runtime-3.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/avro-1.7.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/avro-ipc-1.7.3-tests.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/avro-mapred-1.7.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-cli-1.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-codec-1.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-collections-3.2.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-compress-1.4.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-configuration-1.6.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-dbcp-1.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-io-2.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-lang-2.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-logging-1.0.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-logging-api-1.0.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/commons-pool-1.5.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/datanucleus-connectionpool-2.0.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/datanucleus-core-2.0.3-ZD5977-CDH5293.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/datanucleus-enhancer-2.0.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/datanucleus-rdbms-2.0.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/derby-10.4.2.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/guava-11.0.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hbase-0.94.2-cdh4.2.0-SNAPSHOT-tests.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hbase-0.94.2-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-beeline-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-builtins-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-cli-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-common-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-exec-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-hbase-handler-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-hwi-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-jdbc-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-metastore-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-pdk-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-serde-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-service-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/hive-shims-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jackson-core-asl-1.8.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jackson-jaxrs-1.8.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jackson-mapper-asl-1.8.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jackson-xc-1.8.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/javolution-5.5.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jdo2-api-2.3-ec.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jetty-6.1.26.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jetty-util-6.1.26.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/jline-0.9.94.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/json-20090211.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/log4j-1.2.16.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/netty-3.4.0.Final.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/paranamer-2.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/servlet-api-2.5-20081211.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/slf4j-api-1.6.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/slf4j-log4j12-1.6.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/snappy-java-1.0.4.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/stringtemplate-3.2.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/tempus-fugit-1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/xz-1.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/dist/lib/zookeeper-3.4.5-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/testlibs/ant-contrib-1.0b3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/activation-1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/antlr-3.4.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/aopalliance-1.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/asm-3.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/asm-3.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/cglib-2.2.1-v20090111.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-beanutils-1.7.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-beanutils-core-1.8.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-digester-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-el-1.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-httpclient-3.0.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-httpclient-3.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-io-2.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-lang-2.5.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-logging-1.1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-math-2.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/commons-net-3.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/guice-3.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/guice-servlet-3.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-annotations-2.0.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-auth-2.0.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-common-2.0.0-cdh4.2.0-SNAPSHOT-tests.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-common-2.0.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-hdfs-2.0.0-cdh4.2.0-SNAPSHOT-tests.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-hdfs-2.0.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hadoop-minicluster-2.0.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hamcrest-core-1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jasper-compiler-5.5.23.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jasper-runtime-5.5.23.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/javax.inject-1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jaxb-api-2.2.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jaxb-impl-2.2.3-1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jersey-core-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jersey-guice-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jersey-json-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jersey-server-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jersey-test-framework-grizzly2-1.8.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jets3t-0.6.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jettison-1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jetty-6.1.26.cloudera.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jetty-util-6.1.26.cloudera.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jsch-0.1.42.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jsp-api-2.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/jsr305-1.3.9.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/junit-4.10.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/junit-4.8.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/kfs-0.3.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/libfb303-0.9.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/libthrift-0.9.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/log4j-1.2.17.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/mockito-all-1.8.2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/mockito-all-1.8.5.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/netty-3.2.4.Final.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/protobuf-java-2.4.0a.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/servlet-api-2.5.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/slf4j-api-1.6.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/stax-api-1.0.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/velocity-1.7.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/xmlenc-0.52.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hive-testutils-0.10.0-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/default/high-scale-lib-1.1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/default/velocity-1.5.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/core-3.1.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/ftplet-api-1.0.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/ftpserver-core-1.0.0.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/ftpserver-deprecated-1.0.0-M2.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/hadoop-core-2.0.0-mr1-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/hadoop-minicluster-2.0.0-mr1-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/hadoop-test-2.0.0-mr1-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/hadoop-tools-2.0.0-mr1-cdh4.2.0-SNAPSHOT.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/hsqldb-1.8.0.10.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/junit-4.8.1.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/hadoop-mr1.test/mina-core-2.0.0-M5.jar:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/classes:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ivy/lib/test/hive-contrib-0.10.0-cdh4.2.0-SNAPSHOT.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-launcher.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-junit.jar:/mnt/hive-shared/apache-ant-1.8.4/lib/ant-junit4.jar" />
+    <property name="test.junit.maxmemory" value="512m" />
+    <property name="mvn.deploy.id" value="apache.snapshots.https" />
+    <property name="commons-configuration.version" value="1.6" />
+    <property name="ivy.settings.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ivy" />
+    <property name="fs.default.name" value="file:///" />
+    <property name="hadoop.root" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT" />
+    <property name="java.vm.name.ql.ivy.settings" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="os.version" value="2.6.32-71.el6.x86_64" />
+    <property name="log4j.version" value="1.2.16" />
+    <property name="test.junit.output.usefile" value="true" />
+    <property name="datanucleus.repo" value="http://www.datanucleus.org/downloads/maven2" />
+    <property name="ivy.settings.url.ql.ivy.settings" value="file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ivy/ivysettings.xml" />
+    <property name="hadoop.version.ant-internal" value="2.0.0-cdh4.2.0-SNAPSHOT" />
+    <property name="ivy.module" value="hive-exec" />
+    <property name="mapred.job.tracker" value="" />
+    <property name="sun.jnu.encoding.ql.ivy.settings" value="UTF-8" />
+    <property name="ivy.cache.dir.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/ivy/cache" />
+    <property name="test.serialize.qplan" value="false" />
+    <property name="thrift.args" value="-I ${thrift.home} --gen java:beans,hashcode --gen cpp --gen php --gen py --gen rb" />
+    <property name="libfb303.version" value="0.9.0" />
+    <property name="env.LANG" value="en_US.UTF8" />
+    <property name="commons-logging.version" value="1.0.4" />
+    <property name="ivy.nb.targets.copied" value="0" />
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
+    <property name="hive.conf.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/conf" />
+    <property name="java.vm.vendor" value="Sun Microsystems Inc." />
+    <property name="ivy.log.modules.in.use" value="false" />
+    <property name="ant.file.hiveoffline" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build-offline.xml" />
+    <property name="ivy.publish.src.artifacts.pattern.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/distrib/[type]s/[artifact]-[revision](-[classifier]).[ext]" />
+    <property name="servlet.test.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/lib/servlet-api.jar" />
+    <property name="ant.file.type" value="file" />
+    <property name="java.specification.version.ql.ivy.settings" value="1.6" />
+    <property name="ivy.build.artifacts.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/build/artifacts" />
+    <property name="ivy.report.output.pattern.ql.ivy.settings" value="[organisation]-[module]-[conf].[ext]" />
+    <property name="hadoop.mapreduce.test.jar" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/hadoopcore/hadoop-2.0.0-cdh4.2.0-SNAPSHOT/hadoop-mapreduce-test-2.0.0-cdh4.2.0-SNAPSHOT.jar" />
+    <property name="java.vm.vendor.ql.ivy.settings" value="Sun Microsystems Inc." />
+    <property name="java.awt.graphicsenv.ql.ivy.settings" value="sun.awt.X11GraphicsEnvironment" />
+    <property name="ivy.checksums" value="sha1,md5" />
+    <property name="ivy.conf.dir.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ivy" />
+    <property name="hadoop.opts" value="-D mapreduce.framework.name=local" />
+    <property name="build.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql" />
+    <property name="ivy.configurations" value="*" />
+    <property name="user.dir.ql.ivy.settings" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source" />
+    <property name="repo.dir.ql.ivy.settings" value="/home/hiveptest/.m2/repository" />
+    <property name="datanucleus-connectionpool.version" value="2.0.3" />
+    <property name="ivy.distrib.dir" value="/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/distrib" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.8.4 compiled on May 22 2012" />
+    <property name="minimr.query.files" value="input16_cc.q,scriptfile1.q,bucket4.q,bucketmapjoin6.q,disable_merge_for_bucketing.q,reduce_deduplicate.q,smb_mapjoin_8.q,join1.q,groupby2.q,bucketizedhiveinputformat.q,bucketmapjoin7.q,optrstat_groupby.q,bucket_num_reducers.q" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="eclipse.launch.jvm.args" value="-Xms256m -Xmx1024m" />
+    <property name="commons-cli.version" value="1.2" />
+    <property name="ivy_repo_url" value="http://repo2.maven.org/maven2/org/apache/ivy/ivy/2.1.0/ivy-2.1.0.jar" />
+    <property name="snapshots.cloudera.com.ql.ivy.settings" value="https://repository.cloudera.com/artifactory/libs-snapshot-local/" />
+    <property name="is-offline" value="false" />
+  </properties>
+  <testcase classname="org.apache.hadoop.hive.cli.TestCliDriver" name="testCliDriver_skewjoin" time="434.688">
+    <failure message="Unexpected exception&#xa;See build/ql/tmp/hive.log, or try &quot;ant test ... -Dtest.silent=false&quot; to get more logs." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Unexpected exception
+See build/ql/tmp/hive.log, or try &quot;ant test ... -Dtest.silent=false&quot; to get more logs.
+	at junit.framework.Assert.fail(Assert.java:50)
+	at org.apache.hadoop.hive.cli.TestCliDriver.testCliDriver_skewjoin(TestCliDriver.java:156)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:134)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+	at junit.framework.TestSuite.run(TestSuite.java:238)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:520)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1060)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:911)
+</failure>
+  </testcase>
+  <testcase classname="org.apache.hadoop.hive.cli.TestCliDriver" name="testCliDriver_shutdown" time="4.824" />
+  <system-out><![CDATA[Begin query: skewjoin.q
+Deleted /data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/data/warehouse/dest_j1
+diff -a /data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/test/logs/clientpositive/skewjoin.q.out /data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/ql/src/test/results/clientpositive/skewjoin.q.out
+1513a1514
+> 293143	-136853010385
+Exception: Client execution results failed with error code = 1
+See build/ql/tmp/hive.log, or try "ant test ... -Dtest.silent=false" to get more logs.
+Failed query: skewjoin.q
+Cleaning up TestCliDriver
+]]></system-out>
+  <system-err><![CDATA[WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+Hive history file=/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/tmp/hive_job_log_hiveptest_201301271712_1670514421.txt
+Hive history file=/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/tmp/hive_job_log_hiveptest_201301271712_1323090315.txt
+PREHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt' OVERWRITE INTO TABLE srcpart PARTITION (ds='2008-04-08',hr='11')
+PREHOOK: type: LOAD
+PREHOOK: Output: default@srcpart
+Copying data from file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt
+Copying file: file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt
+Loading data to table default.srcpart partition (ds=2008-04-08, hr=11)
+Partition default.srcpart{ds=2008-04-08, hr=11} stats: [num_files: 1, num_rows: 0, total_size: 5812, raw_data_size: 0]
+Table default.srcpart stats: [num_partitions: 1, num_files: 1, num_rows: 0, total_size: 5812, raw_data_size: 0]
+POSTHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt' OVERWRITE INTO TABLE srcpart PARTITION (ds='2008-04-08',hr='11')
+POSTHOOK: type: LOAD
+POSTHOOK: Output: default@srcpart
+POSTHOOK: Output: default@srcpart@ds=2008-04-08/hr=11
+OK
+PREHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt' OVERWRITE INTO TABLE srcpart PARTITION (ds='2008-04-08',hr='12')
+PREHOOK: type: LOAD
+PREHOOK: Output: default@srcpart
+Copying data from file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt
+Copying file: file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt
+Loading data to table default.srcpart partition (ds=2008-04-08, hr=12)
+Partition default.srcpart{ds=2008-04-08, hr=12} stats: [num_files: 1, num_rows: 0, total_size: 5812, raw_data_size: 0]
+Table default.srcpart stats: [num_partitions: 2, num_files: 2, num_rows: 0, total_size: 11624, raw_data_size: 0]
+POSTHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt' OVERWRITE INTO TABLE srcpart PARTITION (ds='2008-04-08',hr='12')
+POSTHOOK: type: LOAD
+POSTHOOK: Output: default@srcpart
+POSTHOOK: Output: default@srcpart@ds=2008-04-08/hr=12
+OK
+PREHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt' OVERWRITE INTO TABLE srcpart PARTITION (ds='2008-04-09',hr='11')
+PREHOOK: type: LOAD
+PREHOOK: Output: default@srcpart
+Copying data from file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt
+Copying file: file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt
+Loading data to table default.srcpart partition (ds=2008-04-09, hr=11)
+Partition default.srcpart{ds=2008-04-09, hr=11} stats: [num_files: 1, num_rows: 0, total_size: 5812, raw_data_size: 0]
+Table default.srcpart stats: [num_partitions: 3, num_files: 3, num_rows: 0, total_size: 17436, raw_data_size: 0]
+POSTHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt' OVERWRITE INTO TABLE srcpart PARTITION (ds='2008-04-09',hr='11')
+POSTHOOK: type: LOAD
+POSTHOOK: Output: default@srcpart
+POSTHOOK: Output: default@srcpart@ds=2008-04-09/hr=11
+OK
+PREHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt' OVERWRITE INTO TABLE srcpart PARTITION (ds='2008-04-09',hr='12')
+PREHOOK: type: LOAD
+PREHOOK: Output: default@srcpart
+Copying data from file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt
+Copying file: file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt
+Loading data to table default.srcpart partition (ds=2008-04-09, hr=12)
+Partition default.srcpart{ds=2008-04-09, hr=12} stats: [num_files: 1, num_rows: 0, total_size: 5812, raw_data_size: 0]
+Table default.srcpart stats: [num_partitions: 4, num_files: 4, num_rows: 0, total_size: 23248, raw_data_size: 0]
+POSTHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt' OVERWRITE INTO TABLE srcpart PARTITION (ds='2008-04-09',hr='12')
+POSTHOOK: type: LOAD
+POSTHOOK: Output: default@srcpart
+POSTHOOK: Output: default@srcpart@ds=2008-04-09/hr=12
+OK
+PREHOOK: query: CREATE TABLE srcbucket(key int, value string) CLUSTERED BY (key) INTO 2 BUCKETS STORED AS TEXTFILE
+PREHOOK: type: LOAD
+POSTHOOK: query: CREATE TABLE srcbucket(key int, value string) CLUSTERED BY (key) INTO 2 BUCKETS STORED AS TEXTFILE
+POSTHOOK: type: LOAD
+POSTHOOK: Output: default@srcbucket
+OK
+PREHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket0.txt' INTO TABLE srcbucket
+PREHOOK: type: LOAD
+PREHOOK: Output: default@srcbucket
+Copying data from file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket0.txt
+Copying file: file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket0.txt
+Loading data to table default.srcbucket
+Table default.srcbucket stats: [num_partitions: 0, num_files: 1, num_rows: 0, total_size: 5702, raw_data_size: 0]
+POSTHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket0.txt' INTO TABLE srcbucket
+POSTHOOK: type: LOAD
+POSTHOOK: Output: default@srcbucket
+OK
+PREHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket1.txt' INTO TABLE srcbucket
+PREHOOK: type: LOAD
+PREHOOK: Output: default@srcbucket
+Copying data from file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket1.txt
+Copying file: file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket1.txt
+Loading data to table default.srcbucket
+Table default.srcbucket stats: [num_partitions: 0, num_files: 2, num_rows: 0, total_size: 11603, raw_data_size: 0]
+POSTHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket1.txt' INTO TABLE srcbucket
+POSTHOOK: type: LOAD
+POSTHOOK: Output: default@srcbucket
+OK
+PREHOOK: query: CREATE TABLE srcbucket2(key int, value string) CLUSTERED BY (key) INTO 4 BUCKETS STORED AS TEXTFILE
+PREHOOK: type: LOAD
+POSTHOOK: query: CREATE TABLE srcbucket2(key int, value string) CLUSTERED BY (key) INTO 4 BUCKETS STORED AS TEXTFILE
+POSTHOOK: type: LOAD
+POSTHOOK: Output: default@srcbucket2
+OK
+PREHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket20.txt' INTO TABLE srcbucket2
+PREHOOK: type: LOAD
+PREHOOK: Output: default@srcbucket2
+Copying data from file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket20.txt
+Copying file: file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket20.txt
+Loading data to table default.srcbucket2
+Table default.srcbucket2 stats: [num_partitions: 0, num_files: 1, num_rows: 0, total_size: 1358, raw_data_size: 0]
+POSTHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket20.txt' INTO TABLE srcbucket2
+POSTHOOK: type: LOAD
+POSTHOOK: Output: default@srcbucket2
+OK
+PREHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket21.txt' INTO TABLE srcbucket2
+PREHOOK: type: LOAD
+PREHOOK: Output: default@srcbucket2
+Copying data from file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket21.txt
+Copying file: file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket21.txt
+Loading data to table default.srcbucket2
+Table default.srcbucket2 stats: [num_partitions: 0, num_files: 2, num_rows: 0, total_size: 2750, raw_data_size: 0]
+POSTHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket21.txt' INTO TABLE srcbucket2
+POSTHOOK: type: LOAD
+POSTHOOK: Output: default@srcbucket2
+OK
+PREHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket22.txt' INTO TABLE srcbucket2
+PREHOOK: type: LOAD
+PREHOOK: Output: default@srcbucket2
+Copying data from file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket22.txt
+Copying file: file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket22.txt
+Loading data to table default.srcbucket2
+Table default.srcbucket2 stats: [num_partitions: 0, num_files: 3, num_rows: 0, total_size: 4200, raw_data_size: 0]
+POSTHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket22.txt' INTO TABLE srcbucket2
+POSTHOOK: type: LOAD
+POSTHOOK: Output: default@srcbucket2
+OK
+PREHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket23.txt' INTO TABLE srcbucket2
+PREHOOK: type: LOAD
+PREHOOK: Output: default@srcbucket2
+Copying data from file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket23.txt
+Copying file: file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket23.txt
+Loading data to table default.srcbucket2
+Table default.srcbucket2 stats: [num_partitions: 0, num_files: 4, num_rows: 0, total_size: 5812, raw_data_size: 0]
+POSTHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/srcbucket23.txt' INTO TABLE srcbucket2
+POSTHOOK: type: LOAD
+POSTHOOK: Output: default@srcbucket2
+OK
+PREHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt' INTO TABLE src
+PREHOOK: type: LOAD
+PREHOOK: Output: default@src
+Copying data from file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt
+Copying file: file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt
+Loading data to table default.src
+Table default.src stats: [num_partitions: 0, num_files: 1, num_rows: 0, total_size: 5812, raw_data_size: 0]
+POSTHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.txt' INTO TABLE src
+POSTHOOK: type: LOAD
+POSTHOOK: Output: default@src
+OK
+PREHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv3.txt' INTO TABLE src1
+PREHOOK: type: LOAD
+PREHOOK: Output: default@src1
+Copying data from file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv3.txt
+Copying file: file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv3.txt
+Loading data to table default.src1
+Table default.src1 stats: [num_partitions: 0, num_files: 1, num_rows: 0, total_size: 216, raw_data_size: 0]
+POSTHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv3.txt' INTO TABLE src1
+POSTHOOK: type: LOAD
+POSTHOOK: Output: default@src1
+OK
+PREHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.seq' INTO TABLE src_sequencefile
+PREHOOK: type: LOAD
+PREHOOK: Output: default@src_sequencefile
+Copying data from file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.seq
+Copying file: file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.seq
+Loading data to table default.src_sequencefile
+Table default.src_sequencefile stats: [num_partitions: 0, num_files: 1, num_rows: 0, total_size: 10508, raw_data_size: 0]
+POSTHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/kv1.seq' INTO TABLE src_sequencefile
+POSTHOOK: type: LOAD
+POSTHOOK: Output: default@src_sequencefile
+OK
+PREHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/complex.seq' INTO TABLE src_thrift
+PREHOOK: type: LOAD
+PREHOOK: Output: default@src_thrift
+Copying data from file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/complex.seq
+Copying file: file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/complex.seq
+Loading data to table default.src_thrift
+Table default.src_thrift stats: [num_partitions: 0, num_files: 1, num_rows: 0, total_size: 1606, raw_data_size: 0]
+POSTHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/complex.seq' INTO TABLE src_thrift
+POSTHOOK: type: LOAD
+POSTHOOK: Output: default@src_thrift
+OK
+PREHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/json.txt' INTO TABLE src_json
+PREHOOK: type: LOAD
+PREHOOK: Output: default@src_json
+Copying data from file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/json.txt
+Copying file: file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/json.txt
+Loading data to table default.src_json
+Table default.src_json stats: [num_partitions: 0, num_files: 1, num_rows: 0, total_size: 645, raw_data_size: 0]
+POSTHOOK: query: LOAD DATA LOCAL INPATH '/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/data/files/json.txt' INTO TABLE src_json
+POSTHOOK: type: LOAD
+POSTHOOK: Output: default@src_json
+OK
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+rmr: DEPRECATED: Please use 'rm -r' instead.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+java.io.FileNotFoundException: File file:/data/6/hive-local/p0416.mtv.cloudera.com-hiveptest-2/source/build/ql/localscratchdir/hive_2013-01-27_17-19-26_306_7040368384673641161/-mr-10003/hive_skew_join_bigkeys_1 does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.listStatus(RawLocalFileSystem.java:334)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:1416)
+	at org.apache.hadoop.fs.FileSystem.listStatus(FileSystem.java:1456)
+	at org.apache.hadoop.fs.ChecksumFileSystem.listStatus(ChecksumFileSystem.java:557)
+	at org.apache.hadoop.hive.ql.plan.ConditionalResolverSkewJoin.getTasks(ConditionalResolverSkewJoin.java:96)
+	at org.apache.hadoop.hive.ql.exec.ConditionalTask.execute(ConditionalTask.java:81)
+	at org.apache.hadoop.hive.ql.exec.Task.executeTask(Task.java:138)
+	at org.apache.hadoop.hive.ql.exec.TaskRunner.runSequential(TaskRunner.java:57)
+	at org.apache.hadoop.hive.ql.Driver.launchTask(Driver.java:1351)
+	at org.apache.hadoop.hive.ql.Driver.execute(Driver.java:1137)
+	at org.apache.hadoop.hive.ql.Driver.run(Driver.java:950)
+	at org.apache.hadoop.hive.cli.CliDriver.processLocalCmd(CliDriver.java:259)
+	at org.apache.hadoop.hive.cli.CliDriver.processCmd(CliDriver.java:216)
+	at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:412)
+	at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:347)
+	at org.apache.hadoop.hive.ql.QTestUtil.executeClient(QTestUtil.java:779)
+	at org.apache.hadoop.hive.cli.TestCliDriver.testCliDriver_skewjoin(TestCliDriver.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:134)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+	at junit.framework.TestSuite.run(TestSuite.java:238)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:520)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1060)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:911)
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
+junit.framework.AssertionFailedError: Client execution results failed with error code = 1
+See build/ql/tmp/hive.log, or try "ant test ... -Dtest.silent=false" to get more logs.
+	at junit.framework.Assert.fail(Assert.java:50)
+	at org.apache.hadoop.hive.cli.TestCliDriver.testCliDriver_skewjoin(TestCliDriver.java:147)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:134)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+	at junit.framework.TestSuite.run(TestSuite.java:238)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:520)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1060)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:911)
+]]></system-err>
+</testsuite>

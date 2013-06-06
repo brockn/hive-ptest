@@ -1,0 +1,42 @@
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+##### Remember this is a velocity template
+set -e
+set -x
+if [[ -n "${javaHome}" ]]
+then
+  export JAVA_HOME=$javaHome
+  export PATH=$JAVA_HOME/bin/:$PATH
+fi
+export ANT_OPTS="-Xmx1g -XX:MaxPermSize=256m ${antEnvOpts}"
+cd $workingDir/
+(
+  mkdir -p {maven,ivy}
+  test -d ${repositoryName}-source || git clone $repository ${repositoryName}-source
+  cd ${repositoryName}-source
+  git fetch origin
+  git reset --hard HEAD && git clean -f -d
+  git checkout $branch || git checkout -b $branch origin/$branch
+  git reset --hard origin/$branch
+  git merge --ff-only origin/$branch
+  git gc
+  if [[ -f $workingDir/scratch/build.patch ]]
+  then
+    git apply < $workingDir/scratch/build.patch
+  fi
+  ant $antArgs -Divy.default.ivy.user.dir=$workingDir/ivy -Dmvn.local.repo=$workingDir/maven clean package
+  ant $antArgs -Divy.default.ivy.user.dir=$workingDir/ivy -Dmvn.local.repo=$workingDir/maven -Dtestcase=nothing test
+) 1>$logDir/source-prep.txt 2>&1
