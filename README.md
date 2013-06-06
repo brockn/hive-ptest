@@ -1,6 +1,7 @@
 # About
 
-Hive-ptest is a parallel testing framework for hive.
+Hive-ptest is a parallel testing framework for executing the Hive unit tests. If you'd like
+to dive into the code, start with org.apache.hive.ptest.RunTests.
 
 # Building
 

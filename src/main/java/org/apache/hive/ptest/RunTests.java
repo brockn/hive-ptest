@@ -91,12 +91,11 @@ public class RunTests {
     File scratchDir = Dirs.createEmpty(new File(configuration.getWorkingDirectory(), "scratch"));
     File patchDir = Dirs.createEmpty(new File(logDir, "patches"));
     File patchFile = null;
-    if(configuration.getPatch() != null) {
+    if(!configuration.getPatch().isEmpty()) {
       patchFile = new File(patchDir, buildTag + ".patch");
       Files.write(Resources.toByteArray(new URL(configuration.getPatch())), patchFile);
     }
     ImmutableMap.Builder<String, String> templateDefaultsBuilder = ImmutableMap.builder();
-    
     templateDefaultsBuilder.
         put("repository", configuration.getRepository()).
         put("repositoryName", configuration.getRepositoryName()).
@@ -107,11 +106,7 @@ public class RunTests {
         put("logDir", logDir.getAbsolutePath()).
         put("javaHome", configuration.getJavaHome()).
         put("antEnvOpts", configuration.getAntEnvOpts());
-    if(!configuration.getJavaHome().isEmpty()) {
-      templateDefaultsBuilder.put("javaHome", configuration.getJavaHome());
-    }
-    ImmutableMap<String, String> templateDefaults = templateDefaultsBuilder.build();
-    
+    ImmutableMap<String, String> templateDefaults = templateDefaultsBuilder.build();    
     TestParser testParser = new TestParser(configuration.getContext(),
         new File(configuration.getWorkingDirectory(), configuration.getRepositoryName() + "-source"));
     phases = Lists.newArrayList();
