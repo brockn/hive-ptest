@@ -124,6 +124,44 @@ limitations under the License.
         <groupId>org.apache.rat</groupId>
         <artifactId>apache-rat-plugin</artifactId>
       </plugin>
+
+      <plugin>
+        <groupId>com.savage7.maven.plugins</groupId>
+        <artifactId>maven-external-dependency-plugin</artifactId>
+        <version>0.5</version>
+        <inherited>false</inherited>
+        <configuration>
+          <stagingDirectory>
+            ${project.build.directory}/dependencies/
+          </stagingDirectory>
+          <createChecksum>true</createChecksum>
+          <skipChecksumVerification>false</skipChecksumVerification>
+          <force>false</force>
+          <artifactItems>
+
+            <!-- the following jar is not available in a maven repo -->
+            <artifactItem>
+              <groupId>approvaltests</groupId>
+              <artifactId>ApprovalsJava</artifactId>
+              <version>013</version>
+              <packaging>jar</packaging>
+              <downloadUrl>
+                http://people.apache.org/~brock/ApprovalTests.013/ApprovalTests.jar
+              </downloadUrl>
+            </artifactItem>
+          </artifactItems>
+        </configuration>
+        <executions>
+          <execution>
+            <id>resolve-install-external-dependencies</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>resolve-external</goal>
+              <goal>install-external</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
     <pluginManagement>
       <plugins>
