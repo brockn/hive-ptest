@@ -5,15 +5,10 @@ to dive into the code, start with org.apache.hive.ptest.RunTests.
 
 # Building
 
-Approvals is required and must be manually installed:
-
-http://sourceforge.net/projects/approvaltests/files/ApprovalTests.Java/
+Approvals is required and must be installed (mvn process-resources would download and install the artifact):
 
 Example:
-
-    (cd /tmp && wget http://people.apache.org/~brock/ApprovalTests.013/ApprovalTests.jar)
-    mvn install:install-file -Dfile=/tmp/ApprovalTests.jar -DgroupId=approvaltests \
-       -DartifactId=ApprovalsJava -Dversion=013 -Dpackaging=jar
+    mvn process-resources
     mvn clean package
 
 # Sizing
